@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Med-lag</title>
+</head>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background: white;
+		}
+		ul {
+			width: 100%;
+			list-style: none;
+			margin: 0 0 0 250px;
+			padding: 0;
+		}
+		li {
+			float: left;
+		}
+		li a{
+			font-weight: 100px;
+			display: block;
+			padding: 30px 20px;
+			text-decoration: none;
+			text-align: center;	
+		}
+		#container{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 100px,auto;
+			column-gap: 3px;
+		}
+		#header{
+			grid-column: 1/3;
+			width: 100%;
+			overflow: hidden;
+			background: #fafafa;
+			color: #6462dd;
+			text-transform: uppercase;
+			padding: 2rem 4rem 0 4rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		#rightSide  {
+			grid-column: 2/3;
+			background: url("assets/undraw_medicine_b1ol.png");
+			background-repeat: no-repeat;
+			background-color: #fafafa;
+			background-size: 100% auto;
+			width: 100%;
+			height: 40em;
+		}
+		#login{
+			grid-column: 1/2;
+			/* border-right: 2px solid rebeccapurple; */
+			margin-right: 20px;
+			width: 100%;
+			background-color: #fafafa;
+		}
+		/* begining of btn styling */
+		.left {
+			background-color:#fafafa;
+			height: 300px;
+			margin-top: 70px;
+			position: center;
+			float: left;
+			align-items: center;
+			padding: 15px 150px;
+			line-height: 40px;
+			border-right: 1px solid #6462dd;
+
+}
+input{
+    border: 1px solid #6462dd;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fafafa  ;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    margin-bottom:20px;
+    margin-top: 5px;
+}
+input::placeholder{
+	color: #6462dd;
+	
+}
+button {
+    border: 1px solid #6462dd;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fafafa ;
+    border-radius: 7px;
+    height: 20px;
+    cursor: pointer;
+    width: 70px;
+    color: #6462dd;
+    height: 25px;
+}
+#btnfirst{
+	border:none;
+	border-bottom:0.5px solid #6462dd;
+
+    margin-right: 30px;
+    
+}
+#btnlast{
+    background-color: #6462dd;
+    width: 250px;
+    color: #fafafa;
+    padding: 20px 10px 30px 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+}
+p{
+    color:#6462dd;
+}
+#reset{
+    color: #6462dd;
+}
+.logo{
+	/* margin: 2rem; */
+}
+
+.logoText {
+	margin: auto;
+}
+
+.logoHead {
+	display: flex;
+	flex-direction: row;
+	width: 20%;
+	justify-content: space-between;
+}
+	</style>
+<body>
+	<div id="container">
+		<div id="header"> 
+
+			<div class="logoHead">
+				<span class="logo"><img src="assets/uni-logo.png" alt="university logo" style="height: 60px; width: 60px;"></span>
+				<span class="logoText">Unilag HMS</span>
+			</div>
+			<!-- <ul>
+				<a href="#"><li>Login</li></a>
+				<a href="#"><li>Register</li></a>
+			</ul> -->
+		</div>
+		<div id="login"> 
+			<section class="left">
+				<form action="Login.html" method="POST">
+					<div>
+						<button id="btnfirst" >Login</button>
+						<!-- <button  id="btnSec" disabled>Register</button> -->
+					</div>
+					<div>
+						<input type="email" name="Email" id="mail" placeholder="Email" required>
+						<input type="password" name="password" id="pass" placeholder="Password" required>
+					</div>
+					<button type="submit" id="btnlast">Log In</button>
+					<p>Forget password? <a href="#" id="reset">Reset it Now</a></p>
+				</form>
+			</section>
+		</div>
+		<div id="rightSide"> 
+			
+		</div>
+	</div>
+</body>
+</html>
